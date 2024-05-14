@@ -1,9 +1,15 @@
 ---
 title: "My Projects"
 listing:
+  id: sample-listings
   contents: posts
   sort: "date desc"
   type: default
   categories: true
 ---
 
+### A collection of my projects and experiences
+\n
+
+::: {#sample-listings}
+:::

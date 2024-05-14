@@ -1,0 +1,29 @@
+---
+title: "My Hobbies"
+scrollable: true
+format: html
+---
+
+## Sport Climbing
+
+Outside of technical projects, I spend most of my time pursuing Sport Climbing and bouldering as a fulfilling hobby to keep me active and healthy.
+
+![*One of my trips to a crag*](./imgs/rock.jpg)
+
+Sport climbing is an exhilarating form of rock climbing where climbers ascend pre-bolted routes using ropes and harnesses for protection. Requiring immense physical and mental strength, sport climbing tests climbers' technique, endurance, and problem-solving skills as they navigate challenging overhangs, crimps, and dynamic movements on vertical rock faces.
+
+## Trip to Spain
+
+::: columns
+::: {.column width="40%"}
+It was a beautiful experience, the sound of the waves crashing against the rocks, the salty sea breeze, and the warm sun on my skin. The route was challenging, with steep overhangs and delicate footwork, but the stunning views and sense of accomplishment made it all worthwhile.
+:::
+
+::: {.column width="60%"}
+![](imgs/rockwater.jpg)
+:::
+:::
+
+## My next goal, Yosemite Valley, USA
+
+{{< video https://www.youtube.com/watch?v=bcnsDIamHjM >}}

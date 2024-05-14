@@ -1,35 +1,5 @@
-/* CSS styles */
+/* styles.css */
 
-/* Font styles */
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    font-weight: bold;
-}
-
-p {
-    font-family: Georgia, serif;
-}
-
-/* Dark theme */
-body {
-    background-color: #222;
-    color: #fff;
-}
-
-a {
-    color: #fff;
-}
-
-a:hover {
-    color: #ccc;
-}
-
-/* Add more styles for your dark theme here */
-
-/* End of CSS styles */

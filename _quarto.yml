@@ -2,16 +2,19 @@ project:
   type: website
 
 website:
-  title: "Website"
+  title: "Haal01"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: About Me
+      - href: Hobbies.qmd
+        text: My Hobbies
+      - href: projects.qmd
+        text: My Projects
 
 format:
   html:
-    theme: cosmo
+    theme: lux
     css: styles.css
     toc: true
 
