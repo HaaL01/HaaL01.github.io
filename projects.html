@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -149,7 +149,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
@@ -179,7 +179,7 @@ window.Quarto = {
   <li><a href="#a-collection-of-my-projects-and-experiences" id="toc-a-collection-of-my-projects-and-experiences" class="nav-link active" data-scroll-target="#a-collection-of-my-projects-and-experiences">A collection of my projects and experiences</a></li>
   </ul>
 </nav>
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Code">Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Language">Language <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -219,6 +219,11 @@ window.Quarto = {
 <div class="listing-subtitle">
 <a href="./posts/kr.html" class="no-external">Lingustics is a interesting topic.</a>
 </div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Language'); return false;">
+Language
+</div>
+</div>
 <div class="listing-description">
 <a href="./posts/kr.html" class="no-external">Once upon a time, in the summer of 2021, I embarked on a journey to learn the Korean language. It was a beautiful sunny day when I decided to dive into the world of Korean…</a>
 </div>
@@ -246,6 +251,11 @@ Haliq
 </h3>
 <div class="listing-subtitle">
 <a href="./posts/gol.html" class="no-external">Recreating chaotic systems using Java.</a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Code'); return false;">
+Code
+</div>
 </div>
 <div class="listing-description">
 <a href="./posts/gol.html" class="no-external">An interesting study about chaotic systems and AI that I decided to recreate using Java and LibGDX.</a>
