@@ -1,16 +1,79 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Website",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "My Projects",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "A collection of my projects and experiences\n\n\n\n\n\n\n\n\n\n\nKorean Language Learning\n\n\nLingustics is a interesting topic.\n\n\n\n\n\n\n\n\nSep 20, 2022\n\n\nHaliq\n\n\n\n\n\n\n\n\n\n\n\n\nConway’s Game of life\n\n\nRecreating chaotic systems using Java.\n\n\n\n\n\n\n\n\nSep 20, 2021\n\n\nHaliq\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/gol.html",
+    "href": "posts/gol.html",
+    "title": "Conway’s Game of life",
+    "section": "",
+    "text": "An interesting study about chaotic systems and AI that I decided to recreate using Java and LibGDX.\n\n\n\nExample\n\n\nConway’s Game of Life is a fascinating example of a simple set of rules that can give rise to complex and unpredictable behavior, highlighting the intricate connections between simple systems and chaos. Developed by mathematician John Conway in 1970, the Game of Life is a cellular automaton, a computational model that operates on a grid of cells, each of which can be in one of two states: alive or dead. The rules that govern the evolution of the Game of Life are deceptively simple: a living cell with two or three living neighbors survives to the next generation, a dead cell with exactly three living neighbors becomes alive, and all other cells either die or remain dead. Despite these straightforward rules, the Game of Life exhibits a remarkable range of behaviors, from stable patterns that remain unchanged indefinitely to oscillating patterns that cycle through a series of states, and even patterns that exhibit chaotic, unpredictable behavior.\nThe Game of Life’s ability to produce complex and seemingly chaotic patterns from such simple rules has profound implications for our understanding of chaotic systems in general, and for the field of artificial intelligence in particular. It demonstrates that even relatively simple systems can exhibit highly complex and unpredictable behavior, a concept that is central to many areas of machine learning and AI. Neural networks, for instance, are built on the principle of combining simple computational units in intricate ways to produce complex and intelligent behavior. Furthermore, the Game of Life has been used as a testbed for exploring various algorithms and techniques in AI, such as genetic algorithms and cellular automata-based computing. By studying how patterns evolve and interact in the Game of Life, researchers can gain insights into the behavior of complex systems and develop new strategies for solving challenging problems. Overall, Conway’s Game of Life serves as a powerful metaphor for the intricate relationships between simplicity and complexity, order and chaos, and the potential for complex and intelligent behavior to emerge from relatively simple systems."
+  },
+  {
+    "objectID": "posts/gol.html#a-summary-of-conways-game-of-life",
+    "href": "posts/gol.html#a-summary-of-conways-game-of-life",
+    "title": "Conway’s Game of life",
+    "section": "",
+    "text": "An interesting study about chaotic systems and AI that I decided to recreate using Java and LibGDX.\n\n\n\nExample\n\n\nConway’s Game of Life is a fascinating example of a simple set of rules that can give rise to complex and unpredictable behavior, highlighting the intricate connections between simple systems and chaos. Developed by mathematician John Conway in 1970, the Game of Life is a cellular automaton, a computational model that operates on a grid of cells, each of which can be in one of two states: alive or dead. The rules that govern the evolution of the Game of Life are deceptively simple: a living cell with two or three living neighbors survives to the next generation, a dead cell with exactly three living neighbors becomes alive, and all other cells either die or remain dead. Despite these straightforward rules, the Game of Life exhibits a remarkable range of behaviors, from stable patterns that remain unchanged indefinitely to oscillating patterns that cycle through a series of states, and even patterns that exhibit chaotic, unpredictable behavior.\nThe Game of Life’s ability to produce complex and seemingly chaotic patterns from such simple rules has profound implications for our understanding of chaotic systems in general, and for the field of artificial intelligence in particular. It demonstrates that even relatively simple systems can exhibit highly complex and unpredictable behavior, a concept that is central to many areas of machine learning and AI. Neural networks, for instance, are built on the principle of combining simple computational units in intricate ways to produce complex and intelligent behavior. Furthermore, the Game of Life has been used as a testbed for exploring various algorithms and techniques in AI, such as genetic algorithms and cellular automata-based computing. By studying how patterns evolve and interact in the Game of Life, researchers can gain insights into the behavior of complex systems and develop new strategies for solving challenging problems. Overall, Conway’s Game of Life serves as a powerful metaphor for the intricate relationships between simplicity and complexity, order and chaos, and the potential for complex and intelligent behavior to emerge from relatively simple systems."
+  },
+  {
+    "objectID": "Hobbies.html",
+    "href": "Hobbies.html",
+    "title": "My Hobbies",
+    "section": "",
+    "text": "Outside of technical projects, I spend most of my time pursuing Sport Climbing and bouldering as a fulfilling hobby to keep me active and healthy.\n\n\n\nOne of my trips to a crag\n\n\nSport climbing is an exhilarating form of rock climbing where climbers ascend pre-bolted routes using ropes and harnesses for protection. Requiring immense physical and mental strength, sport climbing tests climbers’ technique, endurance, and problem-solving skills as they navigate challenging overhangs, crimps, and dynamic movements on vertical rock faces."
+  },
+  {
+    "objectID": "Hobbies.html#sport-climbing",
+    "href": "Hobbies.html#sport-climbing",
+    "title": "My Hobbies",
+    "section": "",
+    "text": "Outside of technical projects, I spend most of my time pursuing Sport Climbing and bouldering as a fulfilling hobby to keep me active and healthy.\n\n\n\nOne of my trips to a crag\n\n\nSport climbing is an exhilarating form of rock climbing where climbers ascend pre-bolted routes using ropes and harnesses for protection. Requiring immense physical and mental strength, sport climbing tests climbers’ technique, endurance, and problem-solving skills as they navigate challenging overhangs, crimps, and dynamic movements on vertical rock faces."
+  },
+  {
+    "objectID": "Hobbies.html#trip-to-spain",
+    "href": "Hobbies.html#trip-to-spain",
+    "title": "My Hobbies",
+    "section": "Trip to Spain",
+    "text": "Trip to Spain\n\n\nIt was a beautiful experience, the sound of the waves crashing against the rocks, the salty sea breeze, and the warm sun on my skin. The route was challenging, with steep overhangs and delicate footwork, but the stunning views and sense of accomplishment made it all worthwhile."
+  },
+  {
+    "objectID": "Hobbies.html#my-next-goal-yosemite-valley-usa",
+    "href": "Hobbies.html#my-next-goal-yosemite-valley-usa",
+    "title": "My Hobbies",
+    "section": "My next goal, Yosemite Valley, USA",
+    "text": "My next goal, Yosemite Valley, USA"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Abdul Haliq",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Hello, I am a undergraduate AI Engineer at Singapore Institute of Technology. I enjoy exploring new technical projects, learning languages and bouldering/sport climbing."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Abdul Haliq",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "myblog",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/kr.html",
+    "href": "posts/kr.html",
+    "title": "Korean Language Learning",
+    "section": "",
+    "text": "Once upon a time, in the summer of 2021, I embarked on a journey to learn the Korean language. It was a beautiful sunny day when I decided to dive into the world of Korean culture and language.\nI started by enrolling in an online language course that provided comprehensive lessons and interactive exercises. The course covered various aspects of the language, including vocabulary, grammar, pronunciation, and writing.\nEvery day, I dedicated a few hours to studying Korean. I practiced writing Hangul characters, the Korean alphabet, and learned basic phrases and greetings. I also listened to Korean music and watched Korean dramas to immerse myself in the language.\nTo reinforce my learning, I joined online language exchange communities where I could practice speaking with native Korean speakers. It was a great opportunity to apply what I had learned and improve my conversational skills.\nAs the summer progressed, I noticed significant progress in my Korean language skills. I could hold simple conversations, understand basic texts, and even write short paragraphs in Korean. It was incredibly rewarding to see my hard work paying off.\nTo further challenge myself, I decided to take a trip to South Korea at the end of the summer. It was an amazing experience to be surrounded by the language and culture I had been learning about. I had the opportunity to practice my Korean with locals, try authentic Korean cuisine, and explore the beautiful cities and landscapes.\nLooking back, my summer of learning Korean was a transformative experience. It not only expanded my language skills but also opened doors to a new culture and perspective. I am grateful for the journey and the memories I made along the way.\nAnd that’s how my summer of 2021 was filled with the excitement and joy of learning the Korean language."
   }
 ]
