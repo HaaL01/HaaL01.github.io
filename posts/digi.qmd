@@ -1,0 +1,9 @@
+---
+title: Digit Recognizer with CNN
+subtitle: A short exploration into Convolutional Neural Networks (CNNs)
+categories: Code
+image: ../imgs/book.jpg
+author: Haliq
+date: 2024-05-16
+---
+

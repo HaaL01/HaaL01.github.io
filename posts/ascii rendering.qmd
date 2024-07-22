@@ -1,0 +1,9 @@
+---
+title: ASCII Rendering using OpenCV
+subtitle: Inspired by a video by Acerola, using OpenCV to do visualized image rendering.
+categories: Code
+image: ../imgs/book.jpg
+author: Haliq
+date: 2024-07-22
+---
+
