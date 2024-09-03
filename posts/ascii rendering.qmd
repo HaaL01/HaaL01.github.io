@@ -1,9 +1,15 @@
 ---
-title: ASCII Rendering using OpenCV
-subtitle: Inspired by a video by Acerola, using OpenCV to do visualized image rendering.
+title: ASCII Rendering
+subtitle: Inspired by a video by Acerola, to do visualized image rendering or shader.
 categories: Code
 image: ../imgs/book.jpg
 author: Haliq
 date: 2024-07-22
 ---
 
+
+<space> | . | ; | o | ? | $ | #, luminance difference 0.10 > Filter
+
+| / \ _ > Guassian Blur, Sobel Filter, 
+
+Pooling from CNN, Edge Detection
