@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Haliq">
-<meta name="dcterms.date" content="2021-09-20">
+<meta name="dcterms.date" content="2024-05-16">
 
-<title>Haal01 - Conway’s Game of life (WIP)</title>
+<title>Haal01 - Digit Recognizer with CNN (MNIST)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -118,7 +152,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-summary-of-conways-game-of-life" id="toc-a-summary-of-conways-game-of-life" class="nav-link active" data-scroll-target="#a-summary-of-conways-game-of-life">A Summary of Conway’s Game of life</a></li>
+  <li><a href="#project-introduction" id="toc-project-introduction" class="nav-link active" data-scroll-target="#project-introduction">Project Introduction</a></li>
+  <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link" data-scroll-target="#dataset-overview">Dataset Overview</a></li>
+  <li><a href="#understanding-convolutional-models" id="toc-understanding-convolutional-models" class="nav-link" data-scroll-target="#understanding-convolutional-models">Understanding Convolutional Models</a></li>
+  <li><a href="#convulutional-neural-network-model" id="toc-convulutional-neural-network-model" class="nav-link" data-scroll-target="#convulutional-neural-network-model">Convulutional Neural Network Model</a></li>
+  <li><a href="#the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here" id="toc-the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here" class="nav-link" data-scroll-target="#the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here">The following code is a simplified version of the CNN model. For a more detailed implementation, please refer to the full code on colab here</a></li>
+  <li><a href="#after-training" id="toc-after-training" class="nav-link" data-scroll-target="#after-training">After training</a></li>
+  <li><a href="#results-and-conclusion" id="toc-results-and-conclusion" class="nav-link" data-scroll-target="#results-and-conclusion">Results and Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -127,8 +167,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Conway’s Game of life (WIP)</h1>
-<p class="subtitle lead">Recreating chaotic systems using Java.</p>
+<h1 class="title">Digit Recognizer with CNN (MNIST)</h1>
+<p class="subtitle lead">A beginner’s exploration into Convolutional Neural Networks (CNNs)</p>
   <div class="quarto-categories">
     <div class="quarto-category">Code</div>
   </div>
@@ -148,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 20, 2021</p>
+      <p class="date">May 16, 2024</p>
     </div>
   </div>
   
@@ -160,17 +200,73 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="a-summary-of-conways-game-of-life" class="level2">
-<h2 class="anchored" data-anchor-id="a-summary-of-conways-game-of-life">A Summary of Conway’s Game of life</h2>
-<p>An interesting study about chaotic systems that I decided to recreate using Java and LibGDX.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../imgs/conway.jpg" class="img-fluid figure-img"></p>
-<figcaption>Example</figcaption>
-</figure>
-</div>
-<p>Conway’s Game of Life is a fascinating example of a simple set of rules that can give rise to complex and unpredictable behavior, highlighting the intricate connections between simple systems and chaos. Developed by mathematician John Conway in 1970, the Game of Life is a cellular automaton, a computational model that operates on a grid of cells, each of which can be in one of two states: alive or dead. The rules that govern the evolution of the Game of Life are deceptively simple: a living cell with two or three living neighbors survives to the next generation, a dead cell with exactly three living neighbors becomes alive, and all other cells either die or remain dead. Despite these straightforward rules, the Game of Life exhibits a remarkable range of behaviors, from stable patterns that remain unchanged indefinitely to oscillating patterns that cycle through a series of states, and even patterns that exhibit chaotic, unpredictable behavior.</p>
-<p>The Game of Life’s ability to produce complex and seemingly chaotic patterns from such simple rules has profound implications for our understanding of chaotic systems in general, and for the field of artificial intelligence in particular. It demonstrates that even relatively simple systems can exhibit highly complex and unpredictable behavior, a concept that is central to many areas of machine learning and AI. Neural networks, for instance, are built on the principle of combining simple computational units in intricate ways to produce complex and intelligent behavior. Furthermore, the Game of Life has been used as a testbed for exploring various algorithms and techniques in AI, such as genetic algorithms and cellular automata-based computing. By studying how patterns evolve and interact in the Game of Life, researchers can gain insights into the behavior of complex systems and develop new strategies for solving challenging problems. Overall, Conway’s Game of Life serves as a powerful metaphor for the intricate relationships between simplicity and complexity, order and chaos, and the potential for complex and intelligent behavior to emerge from relatively simple systems.</p>
+<section id="project-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="project-introduction">Project Introduction</h2>
+<p>One of the most common projects for begginers to learn about Convolutional Neural Networks (CNNs) is the MNIST dataset. The MNIST dataset is a collection of 28x28 pixel grayscale images of handwritten digits (0-9). The goal of this project is to build a CNN model that can accurately classify these handwritten digits. It is one of the most popular datasets available on Kaggle and is often used as a learning tool for beginners in the field of deep learning.</p>
+<p>In this project, we will learn about CNNs, how they work, and how to build a simple but effective CNN model using TensorFlow and Keras. We will also explore techniques such as data preprocessing, model training, and evaluation.</p>
+</section>
+<section id="dataset-overview" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-overview">Dataset Overview</h2>
+<p>The MNIST dataset consists of 60,000 training images and 10,000 test images. Each image is a 28x28 pixel grayscale image of a handwritten digit (0-9). The dataset is divided into 10 classes, one for each digit. The goal is to build a model that can accurately classify these images into their respective classes.</p>
+<p>Another common method to expand our dataset is through data augmentation. Data augmentation is a technique used to artificially increase the size of the training dataset by applying random transformations to the images. This helps the model generalize better and improve its performance on unseen data. In this scenario, we apply basic transformations such as stretching the images without fundamentally changing the content.</p>
+</section>
+<section id="understanding-convolutional-models" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-convolutional-models">Understanding Convolutional Models</h2>
+<p>One of the key challenges of this dataset is the simplicity of the images. The digits are handwritten and can vary in style and quality. This makes it a good dataset for beginners to learn about image classification and CNNs.</p>
+<p>The most common structure of a CNN model consists of convolutional layers, pooling layers, and fully connected layers. Convolutional layers are used to extract features from the input image, while pooling layers are used to reduce the spatial dimensions of the feature maps. Fully connected layers are used to make predictions based on the extracted features.</p>
+<p>To be more detailed, a convolutional layer is similar to a sliding window that moves across the input image. Through this sliding windows, a matrix calculation is done with a filter (also known as a kernel). This results in a feature map that highlight small patterns in the image. We the extract these smaller patterns and slowly pass them through the network to create larger patterns. We do this process iteratively to create a more complex model.</p>
+<p>A more intuitive way to understand this can be seen in the following video:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/JboZfxUjLSk" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="convulutional-neural-network-model" class="level2">
+<h2 class="anchored" data-anchor-id="convulutional-neural-network-model">Convulutional Neural Network Model</h2>
+</section>
+<section id="the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here" class="level2">
+<h2 class="anchored" data-anchor-id="the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here">The following code is a simplified version of the CNN model. For a more detailed implementation, please refer to the full code on colab <a href="">here</a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># CNN Model</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># CNN Architecture works by Convolutions, Pooling and then Flattening before the Fully Connected Layer.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Sequential([</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Convolutional Layer process</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>layers.Conv2D(<span class="dv">32</span>, kernel_size<span class="op">=</span><span class="dv">3</span>, padding<span class="op">=</span><span class="st">'same'</span>, activation<span class="op">=</span><span class="st">'relu'</span>, input_shape<span class="op">=</span>(<span class="dv">28</span>,<span class="dv">28</span>,<span class="dv">1</span>)),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Pooling acts as a downsampling filter. It reduces the dimensionality of each feature map but retains the most important information.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>layers.MaxPool2D(pool_size<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>)),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Dropout is a regularization technique where we randomly set neurons in a layer to zero. This helps prevent overfitting and improve training.</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>layers.Dropout(<span class="fl">0.2</span>),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Batch Normalization normalizes the activations in the previous layer at each batch.</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>layers.BatchNormalization(),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># We do this 3 times to increase the depth of the network. This allows the network to learn more complex features.</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>layers.Conv2D(<span class="dv">64</span>, kernel_size<span class="op">=</span><span class="dv">3</span>, padding<span class="op">=</span><span class="st">'same'</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>layers.MaxPool2D(pool_size<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>)),</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>layers.Dropout(<span class="fl">0.2</span>),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>layers.BatchNormalization(),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>layers.Conv2D(<span class="dv">64</span>, kernel_size<span class="op">=</span><span class="dv">3</span>, padding<span class="op">=</span><span class="st">'same'</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>layers.MaxPool2D(pool_size<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>)),</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>layers.Dropout(<span class="fl">0.2</span>),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>layers.BatchNormalization(),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Flatten the output from the convolutional layers so that it can be input into the fully connected layer.</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>layers.Flatten(),</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>layers.Dense(<span class="dv">512</span>, activation<span class="op">=</span><span class="st">'relu'</span>),</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>layers.BatchNormalization(),</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>layers.Dropout(<span class="fl">0.3</span>),</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>layers.Dense(<span class="dv">10</span>, activation<span class="op">=</span><span class="st">'softmax'</span>),</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="after-training" class="level2">
+<h2 class="anchored" data-anchor-id="after-training">After training</h2>
+<p>We get the following results after training the models in the last 5 epochs:</p>
+<p>|Epoch 18/50 |460/460 - 1s - 2ms/step - accuracy: 1.0000 - loss: 0.0118 - val_accuracy: 0.9931 - val_loss: 0.0253 |Epoch 19/50 |460/460 - 16s - 34ms/step - accuracy: 0.9821 - loss: 0.0571 - val_accuracy: 0.9917 - val_loss: 0.0342 |Epoch 20/50 |460/460 - 1s - 1ms/step - accuracy: 0.9756 - loss: 0.0700 - val_accuracy: 0.9917 - val_loss: 0.0351 |Epoch 21/50 |460/460 - 16s - 34ms/step - accuracy: 0.9811 - loss: 0.0582 - val_accuracy: 0.9936 - val_loss: 0.0269 |Epoch 22/50 |460/460 - 1s - 1ms/step - accuracy: 0.9878 - loss: 0.0299 - val_accuracy: 0.9936 - val_loss: 0.0269</p>
+<p>The model has an accuracy of 99.36% on the validation set after 22 epochs. This is a good result and shows that the model is performing well on the test data. We can show a simple list of the predictions and the actual inputs to see how well the model is performing. <img src="../imgs/predictions.png" class="img-fluid" alt="Predictions"></p>
+</section>
+<section id="results-and-conclusion" class="level1">
+<h1>Results and Conclusion</h1>
+<p>This is a simple but effective CNN model that can accurately classify handwritten digits from the MNIST dataset. We have learned about CNNs, how they work, and how to build a CNN model using TensorFlow and Keras. We have also explored techniques such as data preprocessing, model training, and evaluation. However, there are still many ways to improve the model. And we can further explore the specific hyperparameters and the architecture of the model to improve its performance. We can also try different data augmentation techniques to further improve the model’s performance. Also, we didn’t talk about optimizations and such, but as a starting point we use the Adam optimizer and the cross-entropy loss. Understanding this two concepts can help us build better models in the future. I hope to discuss further on this in the future.</p>
 
 
 </section>
