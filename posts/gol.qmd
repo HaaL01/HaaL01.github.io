@@ -1,5 +1,5 @@
 ---
-title: Conway's Game of life
+title: Conway's Game of life (WIP)
 subtitle: Recreating chaotic systems using Java.
 categories: Code
 image: ../imgs/conway.jpg
@@ -9,7 +9,7 @@ date: 2021-09-20
 
 ## A Summary of Conway's Game of life
 
-An interesting study about chaotic systems and AI that I decided to recreate using Java and LibGDX.
+An interesting study about chaotic systems that I decided to recreate using Java and LibGDX.
 
 ![Example](../imgs/conway.jpg)
 

@@ -16,6 +16,4 @@ Hello, I am a undergraduate AI Engineer at Singapore Institute of Technology. I 
 
 ## Education
 
-University of California, San Diego \| San Diego, CA PhD in Mathematics \| Sept 2011 - June 2015
-
-Macalester College \| St. Paul MA B.A in Economics \| Sept 2007 - June 2011
+Singapore Institure of Technology, Singapore \| Bachelor of Science w/ Honours in Applied Artificial Intelligence \| Sept 2024 - Apr 2026

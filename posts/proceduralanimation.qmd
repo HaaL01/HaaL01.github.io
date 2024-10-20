@@ -1,0 +1,8 @@
+---
+title: Procedural Animation (WIP)
+subtitle: Learning procedural techniques and mathematics.
+categories: Code
+image: ../imgs/book.jpg
+author: Haliq
+date: -
+---

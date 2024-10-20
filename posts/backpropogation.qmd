@@ -1,5 +1,5 @@
 ---
-title: Fundamentals of Backpropogation
+title: Fundamentals of Backpropogation (WIP)
 subtitle: Building a prerequiste to a fundamental technique.
 categories: Code
 image: ../imgs/book.jpg
@@ -11,7 +11,7 @@ One of the most fundamental techniques in Machine Learning is Backpropogation.
 From ML Models, Neural Networks and Convolutional Networks. An underlying principle for all these methods to function is the use of Backpropogation.
 
 In my experience, I've learnt that a key understanding to Backpropogation can allow for a more accurate, fine-tuned solutions to data models.
-Which is why we will explore our understanding further to build a solid foundation.
+Allowing us to build and debug better when constructing models. Which is why we will explore our understanding further to build a solid foundation.
 
 ## Inspired by Artem Kisanov
 {{< video https://www.youtube.com/watch?v=SmZmBKc7Lrs >}}

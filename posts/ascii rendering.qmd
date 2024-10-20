@@ -1,5 +1,5 @@
 ---
-title: ASCII Rendering
+title: ASCII Rendering (WIP)
 subtitle: Inspired by a video by Acerola, to do visualized image rendering or shader.
 categories: Code
 image: ../imgs/book.jpg
