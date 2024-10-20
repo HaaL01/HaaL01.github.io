@@ -2,9 +2,7 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/posts/backpropogation.html",
       "/posts/ascii rendering.html",
-      "/posts/proceduralanimation.html",
       "/posts/digi.html",
       "/posts/kr.html",
       "/posts/gol.html"
