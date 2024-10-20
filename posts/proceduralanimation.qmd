@@ -4,5 +4,5 @@ subtitle: Learning procedural techniques and mathematics.
 categories: Code
 image: ../imgs/book.jpg
 author: Haliq
-date: -
+date: 2024-07-22
 ---
