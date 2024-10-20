@@ -2,7 +2,7 @@
 title: Digit Recognizer with CNN (MNIST)
 subtitle: A beginner's exploration into Convolutional Neural Networks (CNNs)
 categories: Code
-image: ../imgs/mnist_30000.png
+image: ../imgs/mnist_30000-letter.png
 author: Haliq
 date: 2024-05-16
 ---
@@ -32,7 +32,7 @@ A more intuitive way to understand this can be seen in the following video:
 
 ## Convulutional Neural Network Model
 
-## The following code is a simplified version of the CNN model. For a more detailed implementation, please refer to the full code on colab [here]()
+### The following code is a simplified version of the CNN model. For a more detailed implementation, please refer to the full code on colab [here]()
 
 ```python
 
