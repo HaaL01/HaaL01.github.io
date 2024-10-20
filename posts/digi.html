@@ -155,8 +155,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#project-introduction" id="toc-project-introduction" class="nav-link active" data-scroll-target="#project-introduction">Project Introduction</a></li>
   <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link" data-scroll-target="#dataset-overview">Dataset Overview</a></li>
   <li><a href="#understanding-convolutional-models" id="toc-understanding-convolutional-models" class="nav-link" data-scroll-target="#understanding-convolutional-models">Understanding Convolutional Models</a></li>
-  <li><a href="#convulutional-neural-network-model" id="toc-convulutional-neural-network-model" class="nav-link" data-scroll-target="#convulutional-neural-network-model">Convulutional Neural Network Model</a></li>
+  <li><a href="#convulutional-neural-network-model" id="toc-convulutional-neural-network-model" class="nav-link" data-scroll-target="#convulutional-neural-network-model">Convulutional Neural Network Model</a>
+  <ul class="collapse">
   <li><a href="#the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here" id="toc-the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here" class="nav-link" data-scroll-target="#the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here">The following code is a simplified version of the CNN model. For a more detailed implementation, please refer to the full code on colab here</a></li>
+  </ul></li>
   <li><a href="#after-training" id="toc-after-training" class="nav-link" data-scroll-target="#after-training">After training</a></li>
   <li><a href="#results-and-conclusion" id="toc-results-and-conclusion" class="nav-link" data-scroll-target="#results-and-conclusion">Results and Conclusion</a></li>
   </ul>
@@ -220,9 +222,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="convulutional-neural-network-model" class="level2">
 <h2 class="anchored" data-anchor-id="convulutional-neural-network-model">Convulutional Neural Network Model</h2>
-</section>
-<section id="the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here" class="level2">
-<h2 class="anchored" data-anchor-id="the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here">The following code is a simplified version of the CNN model. For a more detailed implementation, please refer to the full code on colab <a href="">here</a></h2>
+<section id="the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here" class="level3">
+<h3 class="anchored" data-anchor-id="the-following-code-is-a-simplified-version-of-the-cnn-model.-for-a-more-detailed-implementation-please-refer-to-the-full-code-on-colab-here">The following code is a simplified version of the CNN model. For a more detailed implementation, please refer to the full code on colab <a href="">here</a></h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># CNN Model</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># CNN Architecture works by Convolutions, Pooling and then Flattening before the Fully Connected Layer.</span></span>
@@ -257,6 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>layers.Dense(<span class="dv">10</span>, activation<span class="op">=</span><span class="st">'softmax'</span>),</span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 </section>
 <section id="after-training" class="level2">
 <h2 class="anchored" data-anchor-id="after-training">After training</h2>
